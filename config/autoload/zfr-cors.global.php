@@ -15,6 +15,12 @@ return [
         'allowed_methods' => ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 
         /*
+         * Set the list of headers. This is returned in the preflight request to indicate
+         * which HTTP headers can be used when making the actual request
+         */
+        'allowed_headers' => ['Authorization', 'Content-Type'],
+
+        /*
          * Standard CORS requests do not send or set any cookies by default. For this to work,
          * the client must set the XMLHttpRequest's "withCredentials" property to "true". For
          * this to work, you must set this option to true so that the server can serve

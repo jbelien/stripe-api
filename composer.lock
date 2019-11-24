@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "877215026d830493c654b4babbb3da77",
+    "content-hash": "8fa0c581389320a047b3e0a28800d1f4",
     "packages": [
         {
             "name": "bshaffer/oauth2-server-php",
@@ -2692,6 +2692,74 @@
                 "zf"
             ],
             "time": "2018-05-03T19:50:14+00:00"
+        },
+        {
+            "name": "zfr/zfr-cors",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zf-fr/zfr-cors.git",
+                "reference": "cb7c2663a2f4873ba3d5f7887c2ad4b5c2b25edd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zf-fr/zfr-cors/zipball/cb7c2663a2f4873ba3d5f7887c2ad4b5c2b25edd",
+                "reference": "cb7c2663a2f4873ba3d5f7887c2ad4b5c2b25edd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "zendframework/zend-eventmanager": "^2.6.4 || ^3.2.1",
+                "zendframework/zend-http": "^2.10",
+                "zendframework/zend-mvc": "^2.7.15 || ^3.1.1",
+                "zendframework/zend-servicemanager": "^2.7.9 || ^3.4.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^7.5.9 || ^8.2.2",
+                "squizlabs/php_codesniffer": "^3.4",
+                "zendframework/zend-i18n": "^2.9",
+                "zendframework/zend-log": "^2.10",
+                "zendframework/zend-modulemanager": "^2.7.2",
+                "zendframework/zend-serializer": "^2.8",
+                "zendframework/zend-view": "^2.8.1"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "module": "ZfrCors"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ZfrCors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florent Blaison",
+                    "email": "florent.blaison@gmail.com"
+                },
+                {
+                    "name": "Michaël Gallego",
+                    "email": "mic.gallego@gmail.com",
+                    "homepage": "http://www.michaelgallego.fr/"
+                }
+            ],
+            "description": "Zend Framework module that let you deal with CORS requests",
+            "homepage": "https://github.com/zf-fr/zfr-cors",
+            "keywords": [
+                "Zend Framework",
+                "cors",
+                "cross origin sharing resource",
+                "rest",
+                "zf2"
+            ],
+            "time": "2019-06-18T13:43:35+00:00"
         }
     ],
     "packages-dev": [

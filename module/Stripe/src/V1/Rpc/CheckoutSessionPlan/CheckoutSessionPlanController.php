@@ -55,7 +55,7 @@ class CheckoutSessionPlanController extends AbstractActionController
                 if ($this->fee > 0) {
                     $params = array_merge_recursive($params, [
                         'subscription_data' => [
-                            'application_fee_percent' => $this->fee,
+                            'application_fee_percent' => $this->fee * 100,
                         ],
                     ]);
                 }

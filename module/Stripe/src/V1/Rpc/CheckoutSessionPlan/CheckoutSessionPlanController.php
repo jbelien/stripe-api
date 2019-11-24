@@ -38,24 +38,24 @@ class CheckoutSessionPlanController extends AbstractActionController
             Stripe::setApiKey($this->secretKey);
 
             $params = [
-                'mode' => 'subscription',
-                'locale' => $data['locale'] ?? 'auto',
-                'success_url' => $data['successUrl'] ?? null,
-                'cancel_url' => $data['cancelUrl'] ?? null,
+                'mode'                 => 'subscription',
+                'locale'               => $data['locale'] ?? 'auto',
+                'success_url'          => $data['successUrl'] ?? null,
+                'cancel_url'           => $data['cancelUrl'] ?? null,
                 'payment_method_types' => ['card'],
-                'subscription_data' => [
+                'subscription_data'    => [
                     'items' => [['plan' => $data['plan'] ?? null]],
                 ],
             ];
 
             $options = [];
-            if (! is_null($this->connectAccount)) {
+            if (!is_null($this->connectAccount)) {
                 $options['stripe_account'] = $this->connectAccount;
 
                 if ($this->fee > 0) {
                     $params = array_merge_recursive($params, [
                         'subscription_data' => [
-                            'application_fee_percent' => $this->fee
+                            'application_fee_percent' => $this->fee,
                         ],
                     ]);
                 }

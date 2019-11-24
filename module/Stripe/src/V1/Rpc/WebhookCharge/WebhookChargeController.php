@@ -40,13 +40,13 @@ class WebhookChargeController extends AbstractActionController
             Stripe::setApiKey($this->secretKey);
 
             $params = [
-                'amount' => $object['amount'] ?? null,
+                'amount'   => $object['amount'] ?? null,
                 'currency' => $object['currency'] ?? null,
-                'source' => $object['id'] ?? null,
+                'source'   => $object['id'] ?? null,
             ];
 
             $options = [];
-            if (! is_null($this->connectAccount)) {
+            if (!is_null($this->connectAccount)) {
                 $options['stripe_account'] = $this->connectAccount;
 
                 if ($this->fee > 0) {

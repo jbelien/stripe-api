@@ -1,4 +1,5 @@
 <?php
+
 namespace Stripe\V1\Rpc\Ping;
 
 class PingControllerFactory

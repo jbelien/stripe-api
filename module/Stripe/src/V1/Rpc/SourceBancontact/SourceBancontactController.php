@@ -38,27 +38,27 @@ class SourceBancontactController extends AbstractActionController
             Stripe::setApiKey($this->secretKey);
 
             $params = [
-                'type' => 'bancontact',
-                'amount' => $data['amount'] ?? null,
+                'type'     => 'bancontact',
+                'amount'   => $data['amount'] ?? null,
                 'currency' => $data['currency'] ?? null,
-                'owner' => [
+                'owner'    => [
                     'name' => $data['owner'] ?? null,
                 ],
                 'redirect' => [
                     'return_url' => $data['returnUrl'] ?? null,
-                ]
+                ],
             ];
 
-            if (! is_null($data['locale'])) {
+            if (!is_null($data['locale'])) {
                 $params = array_merge($params, [
                     'bancontact' => [
-                        'preferred_language' => $data['locale']
+                        'preferred_language' => $data['locale'],
                     ],
                 ]);
             }
 
             $options = [];
-            if (! is_null($this->connectAccount)) {
+            if (!is_null($this->connectAccount)) {
                 $options['stripe_account'] = $this->connectAccount;
             }
 

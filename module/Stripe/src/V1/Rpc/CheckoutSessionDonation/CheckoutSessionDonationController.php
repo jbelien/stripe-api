@@ -38,16 +38,16 @@ class CheckoutSessionDonationController extends AbstractActionController
             Stripe::setApiKey($this->secretKey);
 
             $params = [
-                'mode' => 'payment',
-                'submit_type' => 'donate',
-                'locale' => $data['locale'] ?? 'auto',
-                'success_url' => $data['successUrl'] ?? null,
-                'cancel_url' => $data['cancelUrl'] ?? null,
+                'mode'                 => 'payment',
+                'submit_type'          => 'donate',
+                'locale'               => $data['locale'] ?? 'auto',
+                'success_url'          => $data['successUrl'] ?? null,
+                'cancel_url'           => $data['cancelUrl'] ?? null,
                 'payment_method_types' => ['card'],
-                'line_items' => [
+                'line_items'           => [
                     [
-                        'name' => 'Single donation',
-                        'amount' => $data['amount'] ?? null,
+                        'name'     => 'Single donation',
+                        'amount'   => $data['amount'] ?? null,
                         'currency' => $data['currency'] ?? null,
                         'quantity' => 1,
                     ],
@@ -55,7 +55,7 @@ class CheckoutSessionDonationController extends AbstractActionController
             ];
 
             $options = [];
-            if (! is_null($this->connectAccount)) {
+            if (!is_null($this->connectAccount)) {
                 $options['stripe_account'] = $this->connectAccount;
 
                 if ($this->fee > 0) {

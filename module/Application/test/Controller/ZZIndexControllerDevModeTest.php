@@ -6,7 +6,6 @@
 
 namespace ApplicationTest\Controller;
 
-use Application\Controller\IndexController;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
@@ -30,15 +29,15 @@ class ZZIndexControllerDevModeTest extends AbstractHttpControllerTestCase
             ],
             'module_listener_options' => [
                 'config_cache_enabled' => false,
-                'config_glob_paths' => [
-                    __DIR__ . '/../../../../config/autoload/{,*.}{global,local}.php',
-                    __DIR__ . '/../../../../config/autoload/{,*.}{global,local}-development.php',
+                'config_glob_paths'    => [
+                    __DIR__.'/../../../../config/autoload/{,*.}{global,local}.php',
+                    __DIR__.'/../../../../config/autoload/{,*.}{global,local}-development.php',
                 ],
-            ]
+            ],
         ];
 
         $this->setApplicationConfig(ArrayUtils::merge(
-            include __DIR__ . '/../../../../config/application.config.php',
+            include __DIR__.'/../../../../config/application.config.php',
             $configOverrides
         ));
 

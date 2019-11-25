@@ -437,7 +437,18 @@ return [
                 'required'   => true,
                 'validators' => [],
                 'filters'    => [],
-                'name'       => 'owner',
+                'name'       => 'ownerName',
+            ],
+            5 => [
+                'required' => false,
+                'validators' => [
+                    0 => [
+                        'name' => \Zend\Validator\EmailAddress::class,
+                        'options' => [],
+                    ],
+                ],
+                'filters' => [],
+                'name' => 'ownerEmail',
             ],
         ],
         'Stripe\\V1\\Rpc\\WebhookCharge\\Validator' => [

@@ -42,7 +42,8 @@ class SourceBancontactController extends AbstractActionController
                 'amount'   => $data['amount'] ?? null,
                 'currency' => $data['currency'] ?? null,
                 'owner'    => [
-                    'name' => $data['owner'] ?? null,
+                    'name' => $data['ownerName'] ?? null,
+                    'email' => $data['ownerEmail'] ?? null,
                 ],
                 'redirect' => [
                     'return_url' => $data['returnUrl'] ?? null,

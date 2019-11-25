@@ -440,15 +440,15 @@ return [
                 'name'       => 'ownerName',
             ],
             5 => [
-                'required' => false,
+                'required'   => false,
                 'validators' => [
                     0 => [
-                        'name' => \Zend\Validator\EmailAddress::class,
+                        'name'    => \Zend\Validator\EmailAddress::class,
                         'options' => [],
                     ],
                 ],
                 'filters' => [],
-                'name' => 'ownerEmail',
+                'name'    => 'ownerEmail',
             ],
         ],
         'Stripe\\V1\\Rpc\\WebhookCharge\\Validator' => [

@@ -51,6 +51,7 @@ class SourceBancontactController extends AbstractActionController
                 'redirect' => [
                     'return_url' => $data['returnUrl'] ?? null,
                 ],
+                'statement_descriptor' => $data['statementDescriptor'] ?? null
             ];
 
             if (!is_null($data['locale'])) {

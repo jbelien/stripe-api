@@ -11,6 +11,9 @@ use ZF\ApiProblem\View\ApiProblemModel;
 use ZF\ContentNegotiation\ViewModel;
 use ZF\ContentValidation\InputFilter;
 
+/**
+ * @link https://stripe.com/docs/api/charges/create
+ */
 class WebhookChargeController extends AbstractActionController
 {
     /** @var string */

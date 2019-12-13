@@ -11,6 +11,9 @@ use ZF\ApiProblem\View\ApiProblemModel;
 use ZF\ContentNegotiation\ViewModel;
 use ZF\ContentValidation\InputFilter;
 
+/**
+ * @link https://stripe.com/docs/api/checkout/sessions/create
+ */
 class CheckoutSessionPlanController extends AbstractActionController
 {
     /** @var string */

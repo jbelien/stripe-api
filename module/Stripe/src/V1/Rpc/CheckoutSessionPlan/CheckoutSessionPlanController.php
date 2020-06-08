@@ -45,7 +45,7 @@ class CheckoutSessionPlanController extends AbstractActionController
                 'locale'               => $data['locale'] ?? 'auto',
                 'success_url'          => $data['successUrl'] ?? null,
                 'cancel_url'           => $data['cancelUrl'] ?? null,
-                'payment_method_types' => ['card'],
+                'payment_method_types' => ['card', 'bancontact'],
                 'subscription_data'    => [
                     'items' => [['plan' => $data['plan'] ?? null]],
                 ],

@@ -46,7 +46,7 @@ class CheckoutSessionDonationController extends AbstractActionController
                 'locale'               => $data['locale'] ?? 'auto',
                 'success_url'          => $data['successUrl'] ?? null,
                 'cancel_url'           => $data['cancelUrl'] ?? null,
-                'payment_method_types' => ['card'],
+                'payment_method_types' => ['card', 'bancontact'],
                 'line_items'           => [
                     [
                         'name'     => 'Single donation',

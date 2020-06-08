@@ -5,11 +5,11 @@ namespace Stripe\V1\Rpc\CheckoutSessionPlan;
 use Exception;
 use Stripe\Checkout\Session;
 use Stripe\Stripe;
-use Zend\Mvc\Controller\AbstractActionController;
-use ZF\ApiProblem\ApiProblem;
-use ZF\ApiProblem\View\ApiProblemModel;
-use ZF\ContentNegotiation\ViewModel;
-use ZF\ContentValidation\InputFilter;
+use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\ApiTools\ApiProblem\ApiProblem;
+use Laminas\ApiTools\ApiProblem\View\ApiProblemModel;
+use Laminas\ApiTools\ContentNegotiation\ViewModel;
+use Laminas\ApiTools\ContentValidation\InputFilter;
 
 /**
  * @link https://stripe.com/docs/api/checkout/sessions/create

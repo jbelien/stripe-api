@@ -2,8 +2,8 @@
 
 namespace Stripe\V1\Rpc\Ping;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use ZF\ContentNegotiation\ViewModel;
+use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\ApiTools\ContentNegotiation\ViewModel;
 
 class PingController extends AbstractActionController
 {

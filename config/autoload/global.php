@@ -5,7 +5,7 @@
  */
 
 return [
-    'zf-content-negotiation' => [
+    'api-tools-content-negotiation' => [
         'selectors' => [],
     ],
     'db' => [

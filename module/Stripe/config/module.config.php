@@ -64,7 +64,7 @@ return [
             ],
         ],
     ],
-    'zf-versioning' => [
+    'api-tools-versioning' => [
         'uri' => [
             0 => 'stripe.rpc.ping',
             1 => 'stripe.rpc.checkout-session',
@@ -73,7 +73,7 @@ return [
             4 => 'stripe.rpc.charge',
         ],
     ],
-    'zf-rpc' => [
+    'api-tools-rpc' => [
         'Stripe\\V1\\Rpc\\Ping\\Controller' => [
             'service_name' => 'Ping',
             'http_methods' => [
@@ -110,7 +110,7 @@ return [
             'route_name' => 'stripe.rpc.charge',
         ],
     ],
-    'zf-content-negotiation' => [
+    'api-tools-content-negotiation' => [
         'controllers' => [
             'Stripe\\V1\\Rpc\\Ping\\Controller'                    => 'Json',
             'Stripe\\V1\\Rpc\\CheckoutSessionPlan\\Controller'     => 'Json',
@@ -168,7 +168,7 @@ return [
             ],
         ],
     ],
-    'zf-content-validation' => [
+    'api-tools-content-validation' => [
         'Stripe\\V1\\Rpc\\Ping\\Controller' => [
             'input_filter' => 'Stripe\\V1\\Rpc\\Ping\\Validator',
         ],
@@ -199,11 +199,11 @@ return [
                 'required'   => false,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\Alpha::class,
+                        'name'    => \Laminas\I18n\Validator\Alpha::class,
                         'options' => [],
                     ],
                     1 => [
-                        'name'    => \Zend\Validator\InArray::class,
+                        'name'    => \Laminas\Validator\InArray::class,
                         'options' => [
                             'strict'   => true,
                             'haystack' => [
@@ -228,7 +228,7 @@ return [
                 ],
                 'filters' => [
                     0 => [
-                        'name'    => \Zend\Filter\StringToLower::class,
+                        'name'    => \Laminas\Filter\StringToLower::class,
                         'options' => [],
                     ],
                 ],
@@ -239,7 +239,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\Validator\Uri::class,
+                        'name'    => \Laminas\Validator\Uri::class,
                         'options' => [
                             'allowRelative' => false,
                         ],
@@ -253,7 +253,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\Validator\Uri::class,
+                        'name'    => \Laminas\Validator\Uri::class,
                         'options' => [
                             'allowRelative' => false,
                         ],
@@ -275,11 +275,11 @@ return [
                 'required'   => false,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\Alpha::class,
+                        'name'    => \Laminas\I18n\Validator\Alpha::class,
                         'options' => [],
                     ],
                     1 => [
-                        'name'    => \Zend\Validator\InArray::class,
+                        'name'    => \Laminas\Validator\InArray::class,
                         'options' => [
                             'strict'   => true,
                             'haystack' => [
@@ -304,7 +304,7 @@ return [
                 ],
                 'filters' => [
                     0 => [
-                        'name'    => \Zend\Filter\StringToLower::class,
+                        'name'    => \Laminas\Filter\StringToLower::class,
                         'options' => [],
                     ],
                 ],
@@ -314,7 +314,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\Validator\Uri::class,
+                        'name'    => \Laminas\Validator\Uri::class,
                         'options' => [
                             'allowRelative' => false,
                         ],
@@ -327,7 +327,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\Validator\Uri::class,
+                        'name'    => \Laminas\Validator\Uri::class,
                         'options' => [
                             'allowRelative' => false,
                         ],
@@ -340,7 +340,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\IsInt::class,
+                        'name'    => \Laminas\I18n\Validator\IsInt::class,
                         'options' => [],
                     ],
                 ],
@@ -351,13 +351,13 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\Alpha::class,
+                        'name'    => \Laminas\I18n\Validator\Alpha::class,
                         'options' => [],
                     ],
                 ],
                 'filters' => [
                     0 => [
-                        'name'    => \Zend\Filter\StringToLower::class,
+                        'name'    => \Laminas\Filter\StringToLower::class,
                         'options' => [],
                     ],
                 ],
@@ -369,11 +369,11 @@ return [
                 'required'   => false,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\Alpha::class,
+                        'name'    => \Laminas\I18n\Validator\Alpha::class,
                         'options' => [],
                     ],
                     1 => [
-                        'name'    => \Zend\Validator\InArray::class,
+                        'name'    => \Laminas\Validator\InArray::class,
                         'options' => [
                             'strict'   => true,
                             'haystack' => [
@@ -387,7 +387,7 @@ return [
                 ],
                 'filters' => [
                     0 => [
-                        'name'    => \Zend\Filter\StringToLower::class,
+                        'name'    => \Laminas\Filter\StringToLower::class,
                         'options' => [],
                     ],
                 ],
@@ -397,7 +397,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\Validator\Uri::class,
+                        'name'    => \Laminas\Validator\Uri::class,
                         'options' => [
                             'allowRelative' => false,
                         ],
@@ -410,7 +410,7 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\IsInt::class,
+                        'name'    => \Laminas\I18n\Validator\IsInt::class,
                         'options' => [],
                     ],
                 ],
@@ -421,13 +421,13 @@ return [
                 'required'   => true,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\I18n\Validator\Alpha::class,
+                        'name'    => \Laminas\I18n\Validator\Alpha::class,
                         'options' => [],
                     ],
                 ],
                 'filters' => [
                     0 => [
-                        'name'    => \Zend\Filter\StringToLower::class,
+                        'name'    => \Laminas\Filter\StringToLower::class,
                         'options' => [],
                     ],
                 ],
@@ -443,7 +443,7 @@ return [
                 'required'   => false,
                 'validators' => [
                     0 => [
-                        'name'    => \Zend\Validator\EmailAddress::class,
+                        'name'    => \Laminas\Validator\EmailAddress::class,
                         'options' => [],
                     ],
                 ],

@@ -6,8 +6,8 @@
 
 namespace ApplicationTest\Controller;
 
-use Zend\Stdlib\ArrayUtils;
-use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
+use Laminas\Stdlib\ArrayUtils;
+use Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 /**
  * Name is intentional, to force it to run last; this was necessary as,
@@ -24,8 +24,8 @@ class ZZIndexControllerDevModeTest extends AbstractHttpControllerTestCase
         // etc.
         $configOverrides = [
             'modules' => [
-                'ZF\Apigility\Admin',
-                'ZF\Apigility\Admin\Ui',
+                'Laminas\ApiTools\Admin',
+                'Laminas\ApiTools\Admin\Ui',
             ],
             'module_listener_options' => [
                 'config_cache_enabled' => false,

@@ -6,9 +6,9 @@
 
 namespace Application\Controller;
 
+use Laminas\ApiTools\Admin\Module as AdminModule;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
-use Laminas\ApiTools\Admin\Module as AdminModule;
 
 class IndexController extends AbstractActionController
 {

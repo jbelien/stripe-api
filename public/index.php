@@ -3,8 +3,8 @@
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  * @copyright Copyright (c) 2014-2016 Zend Technologies USA Inc. (http://www.zend.com)
  */
-use Laminas\Stdlib\ArrayUtils;
 use Laminas\ApiTools\Application;
+use Laminas\Stdlib\ArrayUtils;
 
 /*
  * This makes our life easier when dealing with paths. Everything is relative

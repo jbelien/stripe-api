@@ -2,8 +2,8 @@
 
 namespace Stripe\V1\Rpc\Ping;
 
-use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\ApiTools\ContentNegotiation\ViewModel;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 class PingController extends AbstractActionController
 {

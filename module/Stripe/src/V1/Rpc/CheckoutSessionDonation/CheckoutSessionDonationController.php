@@ -3,13 +3,13 @@
 namespace Stripe\V1\Rpc\CheckoutSessionDonation;
 
 use Exception;
-use Stripe\Checkout\Session;
-use Stripe\Stripe;
-use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\ApiTools\ApiProblem\ApiProblem;
 use Laminas\ApiTools\ApiProblem\View\ApiProblemModel;
 use Laminas\ApiTools\ContentNegotiation\ViewModel;
 use Laminas\ApiTools\ContentValidation\InputFilter;
+use Laminas\Mvc\Controller\AbstractActionController;
+use Stripe\Checkout\Session;
+use Stripe\Stripe;
 
 /**
  * @link https://stripe.com/docs/api/checkout/sessions/create

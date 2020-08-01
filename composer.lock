@@ -2928,16 +2928,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.39.0",
+            "version": "v7.45.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "350e4f4db026bd0627925885b30c09d054777b68"
+                "reference": "21e5001f5e0d787e4755c8bfc00e578dce9ae058"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/350e4f4db026bd0627925885b30c09d054777b68",
-                "reference": "350e4f4db026bd0627925885b30c09d054777b68",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/21e5001f5e0d787e4755c8bfc00e578dce9ae058",
+                "reference": "21e5001f5e0d787e4755c8bfc00e578dce9ae058",
                 "shasum": ""
             },
             "require": {
@@ -2981,7 +2981,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-06-25T23:56:19+00:00"
+            "time": "2020-07-29T04:29:52+00:00"
         },
         {
             "name": "zfr/zfr-cors",

@@ -66,7 +66,7 @@
         "development-disable": "laminas-development-mode disable",
         "development-enable": "laminas-development-mode enable",
         "development-status": "laminas-development-mode status",
-        "serve": "php -S localhost:8080 -t public/",
+        "serve": "php -S localhost:8080 -t public/ public/index.php",
         "test": "phpunit"
     }
 }

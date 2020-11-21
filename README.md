@@ -4,6 +4,17 @@
 
 File: `config/autoload/local.php`
 
+```php
+return [
+    'zfr_cors' => [
+        'allowed_origins' => ['*'],
+    ],
+    'secretKey' => '', // Required
+    'connectAccount' => '', // Optional
+    'fee' => 0.05, // Optional
+];
+```
+
 ## Usage
 
 ### Create session (subscription mode)

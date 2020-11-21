@@ -17,7 +17,7 @@ return [
 
 ## Usage
 
-### Create session (subscription mode)
+### Create checkout session (subscription mode)
 
 Documentation: <https://stripe.com/docs/api/checkout/sessions/create>
 
@@ -32,7 +32,7 @@ POST /checkout/session/plan
 | plan       | **required** | [Plan ID](https://stripe.com/docs/api/plans) for this item.                                           |
 | locale     | (optional)   | The IETF language tag of the locale Checkout is displayed in.                                         |
 
-### Create session (payment mode)
+### Create checkout session (payment mode)
 
 Documentation: <https://stripe.com/docs/api/checkout/sessions/create>
 

@@ -1,5 +1,7 @@
 # Stripe Apigility API
 
+**Compatible with [Stripe API version `2020-08-27`](https://stripe.com/docs/upgrades#2020-08-27)**
+
 ## Configuration
 
 File: `config/autoload/local.php`
@@ -46,6 +48,7 @@ POST /checkout/session/donation
 | cancelUrl  | **required** | The URL the customer will be directed to if they decide to cancel payment and return to your website. |
 | amount     | **required** | The amount to be collected per unit of the line item.                                                 |
 | currency   | **required** | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.     |
+| message    | (optional)   | The description for the line item, to be displayed on the Checkout page.                              |
 | locale     | (optional)   | The IETF language tag of the locale Checkout is displayed in.                                         |
 
 ### Ping

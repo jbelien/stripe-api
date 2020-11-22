@@ -49,11 +49,18 @@ class CheckoutSessionDonationController extends AbstractActionController
                 'payment_method_types' => ['card', 'bancontact'],
                 'line_items'           => [
                     [
-                        'name'     => 'Single donation',
-                        'amount'   => $data['amount'] ?? null,
-                        'currency' => $data['currency'] ?? null,
-                        'quantity' => 1,
+                        'quantity'   => 1,
+                        'price_data' => [
+                            'currency'     => $data['currency'] ?? null,
+                            'unit_amount'  => $data['amount'] ?? null,
+                            'product_data' => [
+                                'name' => 'Single donation',
+                            ],
+                        ],
                     ],
+                ],
+                'payment_intent_data' => [
+                    'description' => $data['message'] ?? null,
                 ],
             ];
 
@@ -62,14 +69,7 @@ class CheckoutSessionDonationController extends AbstractActionController
                 $options['stripe_account'] = $this->connectAccount;
 
                 if ($this->fee > 0) {
-                    $params = array_merge(
-                        $params,
-                        [
-                            'payment_intent_data' => [
-                                'application_fee_amount' => $data['amount'] * $this->fee,
-                            ],
-                        ]
-                    );
+                    $params['payment_intent_data']['application_fee_amount'] =  $data['amount'] * $this->fee;
                 }
             }
 

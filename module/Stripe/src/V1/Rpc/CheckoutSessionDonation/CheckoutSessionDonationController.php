@@ -69,7 +69,7 @@ class CheckoutSessionDonationController extends AbstractActionController
                 $options['stripe_account'] = $this->connectAccount;
 
                 if ($this->fee > 0) {
-                    $params['payment_intent_data']['application_fee_amount'] =  $data['amount'] * $this->fee;
+                    $params['payment_intent_data']['application_fee_amount'] = $data['amount'] * $this->fee;
                 }
             }
 

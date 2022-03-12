@@ -2884,16 +2884,16 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "bf180a382393e7db5c1e8d0f2ec0c4af9c724baf"
+                "reference": "88bf037259869891afce6504cacc4f8a07b24d0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/bf180a382393e7db5c1e8d0f2ec0c4af9c724baf",
-                "reference": "bf180a382393e7db5c1e8d0f2ec0c4af9c724baf",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/88bf037259869891afce6504cacc4f8a07b24d0f",
+                "reference": "88bf037259869891afce6504cacc4f8a07b24d0f",
                 "shasum": ""
             },
             "require": {
@@ -2936,7 +2936,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-09-03T17:53:30+00:00"
+            "time": "2021-12-21T14:34:37+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -3528,32 +3528,32 @@
         },
         {
             "name": "laminas-api-tools/api-tools-asset-manager",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas-api-tools/api-tools-asset-manager.git",
-                "reference": "10db659339a3653a0a4aba56e5f45a2ff5675362"
+                "reference": "6d3fc1390b5fd7aa0829d7a569f3138857fcf815"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-asset-manager/zipball/10db659339a3653a0a4aba56e5f45a2ff5675362",
-                "reference": "10db659339a3653a0a4aba56e5f45a2ff5675362",
+                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-asset-manager/zipball/6d3fc1390b5fd7aa0829d7a569f3138857fcf815",
+                "reference": "6d3fc1390b5fd7aa0829d7a569f3138857fcf815",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.1 || ^2.0",
                 "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.3 || ~8.0.0"
+                "php": "^7.3 || ~8.0.0 || ~8.1.0"
             },
             "replace": {
                 "zfcampus/zf-asset-manager": "^1.2.0"
             },
             "require-dev": {
-                "composer/composer": "^1.4.1 || ^2.0",
-                "laminas/laminas-coding-standard": "~2.2.0",
-                "mikey179/vfsstream": "^1.6.7",
+                "composer/composer": "^1.4.1 || ^2.1.9",
+                "laminas/laminas-coding-standard": "~2.3.0",
+                "mikey179/vfsstream": "^1.6.10",
                 "phpspec/prophecy-phpunit": "^2.0",
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": "^9.5.10",
                 "psalm/plugin-phpunit": "^0.16.0",
                 "vimeo/psalm": "^4.7"
             },
@@ -3578,7 +3578,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-06-07T21:05:17+00:00"
+            "time": "2021-12-09T16:57:52+00:00"
         },
         {
             "name": "laminas/laminas-code",

@@ -47,28 +47,29 @@
         },
         {
             "name": "bshaffer/oauth2-server-php",
-            "version": "v1.11.1",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bshaffer/oauth2-server-php.git",
-                "reference": "5a0c8000d4763b276919e2106f54eddda6bc50fa"
+                "reference": "60254fc7fbb08ce56164faae9e075068adf914ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bshaffer/oauth2-server-php/zipball/5a0c8000d4763b276919e2106f54eddda6bc50fa",
-                "reference": "5a0c8000d4763b276919e2106f54eddda6bc50fa",
+                "url": "https://api.github.com/repos/bshaffer/oauth2-server-php/zipball/60254fc7fbb08ce56164faae9e075068adf914ef",
+                "reference": "60254fc7fbb08ce56164faae9e075068adf914ef",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=7.1"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.8",
-                "firebase/php-jwt": "~2.2",
+                "aws/aws-sdk-php": "^2.8",
+                "firebase/php-jwt": "^2.2",
                 "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^4.0",
-                "predis/predis": "dev-master",
-                "thobbs/phpcassa": "dev-master"
+                "phpunit/phpunit": "^7.5||^8.0",
+                "predis/predis": "^1.1",
+                "thobbs/phpcassa": "dev-master",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "~2.8 is required to use DynamoDB storage",
@@ -101,7 +102,7 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2018-12-04T00:29:32+00:00"
+            "time": "2022-04-19T17:09:11+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -825,16 +826,16 @@
         },
         {
             "name": "laminas-api-tools/api-tools-rest",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas-api-tools/api-tools-rest.git",
-                "reference": "36583a72bdb9cb66247f491e2194d7dad9836606"
+                "reference": "c6c4e16ff2eb9a25d5aa10318c4363f7c560a46b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-rest/zipball/36583a72bdb9cb66247f491e2194d7dad9836606",
-                "reference": "36583a72bdb9cb66247f491e2194d7dad9836606",
+                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-rest/zipball/c6c4e16ff2eb9a25d5aa10318c4363f7c560a46b",
+                "reference": "c6c4e16ff2eb9a25d5aa10318c4363f7c560a46b",
                 "shasum": ""
             },
             "require": {
@@ -894,7 +895,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-06-21T21:57:21+00:00"
+            "time": "2022-04-19T21:49:13+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-rpc",
@@ -3496,16 +3497,16 @@
         },
         {
             "name": "laminas-api-tools/api-tools-admin",
-            "version": "1.10.3",
+            "version": "1.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas-api-tools/api-tools-admin.git",
-                "reference": "6bbe152523a9a3f5dfa00b31b5a149c3bd6970ef"
+                "reference": "e094bf3413b5e21f1ecd86f1162121bbdea633b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-admin/zipball/6bbe152523a9a3f5dfa00b31b5a149c3bd6970ef",
-                "reference": "6bbe152523a9a3f5dfa00b31b5a149c3bd6970ef",
+                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-admin/zipball/e094bf3413b5e21f1ecd86f1162121bbdea633b2",
+                "reference": "e094bf3413b5e21f1ecd86f1162121bbdea633b2",
                 "shasum": ""
             },
             "require": {
@@ -3585,7 +3586,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-01-14T20:50:09+00:00"
+            "time": "2022-04-20T08:38:35+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-admin-ui",

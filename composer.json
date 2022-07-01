@@ -23,7 +23,7 @@
         "zfr/zfr-cors": "^2.0"
     },
     "require-dev": {
-        "laminas-api-tools/api-tools-admin": "^1.6",
+        "laminas-api-tools/api-tools-admin": "^2.0",
         "laminas-api-tools/api-tools-asset-manager": "^1.2",
         "laminas/laminas-developer-tools": "^2.0.2",
         "laminas/laminas-test": "^2.6.1 || ^3.2",

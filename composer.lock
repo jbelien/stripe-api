@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "224e67efcd8da3e9b9115b1ae3dd0cc8",
+    "content-hash": "562ff6256d3e91464b1b062eb6752eac",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -3116,16 +3116,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.114.0",
+            "version": "v10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "63be231686c6874befb5b3a47fb8effb4c30b78b"
+                "reference": "a895466e5208cc7974bc3bed80abe825418ce0b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/63be231686c6874befb5b3a47fb8effb4c30b78b",
-                "reference": "63be231686c6874befb5b3a47fb8effb4c30b78b",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/a895466e5208cc7974bc3bed80abe825418ce0b0",
+                "reference": "a895466e5208cc7974bc3bed80abe825418ce0b0",
                 "shasum": ""
             },
             "require": {
@@ -3136,6 +3136,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "3.5.0",
+                "php-coveralls/php-coveralls": "^2.5",
                 "phpstan/phpstan": "^1.2",
                 "phpunit/phpunit": "^5.7 || ^9.0",
                 "squizlabs/php_codesniffer": "^3.3"
@@ -3168,7 +3169,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2022-02-15T22:48:31+00:00"
+            "time": "2022-11-16T20:15:30+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

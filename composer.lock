@@ -3569,16 +3569,16 @@
         },
         {
             "name": "laminas-api-tools/api-tools-asset-manager",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas-api-tools/api-tools-asset-manager.git",
-                "reference": "6d3fc1390b5fd7aa0829d7a569f3138857fcf815"
+                "reference": "509c32555ebf1d301eb2db27342e8e9272fc2477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-asset-manager/zipball/6d3fc1390b5fd7aa0829d7a569f3138857fcf815",
-                "reference": "6d3fc1390b5fd7aa0829d7a569f3138857fcf815",
+                "url": "https://api.github.com/repos/laminas-api-tools/api-tools-asset-manager/zipball/509c32555ebf1d301eb2db27342e8e9272fc2477",
+                "reference": "509c32555ebf1d301eb2db27342e8e9272fc2477",
                 "shasum": ""
             },
             "require": {
@@ -3619,7 +3619,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-12-09T16:57:52+00:00"
+            "time": "2021-12-09T17:55:46+00:00"
         },
         {
             "name": "laminas/laminas-code",

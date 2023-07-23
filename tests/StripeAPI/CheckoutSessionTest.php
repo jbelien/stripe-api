@@ -14,10 +14,10 @@ final class CheckoutSessionTest extends TestCase
         $app->post('/checkout/session/{mode:(?:payment|subscription)}', CheckoutSessionController::class)->addMiddleware(new BodyParsingMiddleware());
 
         $request = $this->createRequest('POST', '/checkout/session/payment', [
-            'currency' => 'eur',
-            'amount' => 1000,
+            'currency'   => 'eur',
+            'amount'     => 1000,
             'successUrl' => 'https://example.com/success',
-            'cancelUrl' => 'https://example.com/cancel',
+            'cancelUrl'  => 'https://example.com/cancel',
         ]);
 
         $response = $app->handle($request);
@@ -42,9 +42,9 @@ final class CheckoutSessionTest extends TestCase
         $app->post('/checkout/session/{mode:(?:payment|subscription)}', CheckoutSessionController::class)->addMiddleware(new BodyParsingMiddleware());
 
         $request = $this->createRequest('POST', '/checkout/session/subscription', [
-            'plan' => 'price_1NX4RVEKdKUBXjXuTlaGwGsk', // Test Plan €1.00 / month
+            'plan'       => 'price_1NX4RVEKdKUBXjXuTlaGwGsk', // Test Plan €1.00 / month
             'successUrl' => 'https://example.com/success',
-            'cancelUrl' => 'https://example.com/cancel',
+            'cancelUrl'  => 'https://example.com/cancel',
         ]);
 
         $response = $app->handle($request);

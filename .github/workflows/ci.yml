@@ -26,6 +26,7 @@ jobs:
         uses: ramsey/composer-install@v2
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        working-directory: src
       - name: Run test suite
         run: composer run-script test
         env:

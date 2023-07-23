@@ -1,4 +1,4 @@
-# Stripe Apigility API
+# Stripe API
 
 **Compatible with [Stripe API version `2022-11-15`](https://stripe.com/docs/upgrades#2022-11-15)**
 

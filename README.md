@@ -8,9 +8,11 @@ File: `src/.env` (you can copy-paste content of `src/.env.example`)
 
 ## Usage
 
-### Create checkout session - Subscription mode
+### Create checkout session
 
 Documentation: <https://stripe.com/docs/api/checkout/sessions/create>
+
+#### Subscription mode
 
 ```http
 POST /checkout/session/subscription
@@ -27,9 +29,7 @@ POST /checkout/session/subscription
 >
 > If you're upgrading from version 1.x, you must use `subscription` instead of `plan` in the request URL.
 
-### Create checkout session - Payment mode
-
-Documentation: <https://stripe.com/docs/api/checkout/sessions/create>
+#### Payment mode
 
 ```http
 POST /checkout/session/payment

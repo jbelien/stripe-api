@@ -25,7 +25,7 @@ POST /checkout/session/subscription
 | plan       | **required** | [Plan ID](https://stripe.com/docs/api/plans) for this item.                                           |
 | locale     | (optional)   | The IETF language tag of the locale Checkout is displayed in.                                         |
 
-> **Note**
+> **Note**  
 > If you're upgrading from version 1.x, you must use `subscription` instead of `plan` in the request URL.
 
 #### Payment mode

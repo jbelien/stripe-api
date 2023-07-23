@@ -1,8 +1,9 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in('src')
     ->in('public')
+    ->in('src')
+    ->in('tests')
 ;
 
 $config = new PhpCsFixer\Config();

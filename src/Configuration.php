@@ -19,7 +19,7 @@ final class Configuration
         $this->debug = filter_var($_ENV['APP_DEBUG'], FILTER_VALIDATE_BOOLEAN);
 
         $this->stripeApiKey = $_ENV['STRIPE_API_KEY'];
-        $this->stripeConnectedAccount = $_ENV['STRIPE_CONNECTED_ACCOUNT'];
-        $this->feePercentage = $_ENV['FEE_PERCENTAGE'];
+        $this->stripeConnectedAccount = $_ENV['STRIPE_CONNECTED_ACCOUNT'] ?? null;
+        $this->feePercentage = $_ENV['FEE_PERCENTAGE'] ?? null;
     }
 }

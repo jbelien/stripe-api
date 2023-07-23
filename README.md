@@ -6,6 +6,15 @@
 
 File: `src/.env` (you can copy-paste content of `src/.env.example`)
 
+- `APP_DEBUG` - Debug mode (`true` or `false`)
+- `STRIPE_SECRET_KEY` - Stripe secret key (should start with `sk_live_`) ; see [API keys](https://dashboard.stripe.com/apikeys)
+
+If you want to use Stripe Connect, you should also set these variables:
+
+- `STRIPE_SECRET_KEY` - Stripe secret key for the "parent" account (should start with `sk_live_`) ; see [API keys](https://dashboard.stripe.com/apikeys)
+- `STRIPE_CONNECTED_ACCOUNT` - Stripe account ID of the "child" account (should start with `acct_`) ; see [settings](https://dashboard.stripe.com/settings/account)
+- `FEE_PERCENTAGE` - Fee percentage (e.g. `0.10` for 10%)
+
 ## Usage
 
 ### Create checkout session

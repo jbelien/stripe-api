@@ -1,5 +1,6 @@
 {
     "name": "jbelien/stripe-api",
+    "description": "A simple Stripe API wrapper",
     "license": "GPL-3.0-or-later",
     "type": "project",
     "require": {
@@ -28,10 +29,10 @@
         }
     },
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
             "phpstan/extension-installer": true
-        }
+        },
+        "sort-packages": true
     },
     "scripts": {
         "analyse": "phpstan analyse",

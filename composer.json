@@ -19,7 +19,7 @@
         "laminas/laminas-dependency-plugin": "^1.0 || ^2.0",
         "laminas/laminas-development-mode": "^3.2",
         "laminas/laminas-i18n": "^2.10",
-        "stripe/stripe-php": "^7.13",
+        "stripe/stripe-php": "^10.18",
         "zfr/zfr-cors": "^2.0"
     },
     "require-dev": {

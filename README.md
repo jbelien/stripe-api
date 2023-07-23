@@ -26,7 +26,6 @@ POST /checkout/session/subscription
 | locale     | (optional)   | The IETF language tag of the locale Checkout is displayed in.                                         |
 
 > **Note**
->
 > If you're upgrading from version 1.x, you must use `subscription` instead of `plan` in the request URL.
 
 #### Payment mode
@@ -44,6 +43,5 @@ POST /checkout/session/payment
 | message    | (optional)   | The description for the line item, to be displayed on the Checkout page.                              |
 | locale     | (optional)   | The IETF language tag of the locale Checkout is displayed in.                                         |
 
-> **Note**
->
+> **Note**  
 > If you're upgrading from version 1.x, you must use `payment` instead of `donation` in the request URL.

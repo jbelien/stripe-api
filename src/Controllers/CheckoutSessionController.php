@@ -28,7 +28,7 @@ class CheckoutSessionController
         $data = $request->getParsedBody();
 
         list($params, $options) = match ($args['mode']) {
-            'payment'      => $this->payment($data),
+            'payment' => $this->payment($data),
             'subscription' => $this->subscription($data),
         };
 
@@ -51,18 +51,18 @@ class CheckoutSessionController
     private function payment(array $data): array
     {
         $params = [
-            'mode'                 => 'payment',
-            'submit_type'          => 'donate',
-            'locale'               => $data['locale'] ?? 'auto',
-            'success_url'          => $data['successUrl'],
-            'cancel_url'           => $data['cancelUrl'],
+            'mode' => 'payment',
+            'submit_type' => 'donate',
+            'locale' => $data['locale'] ?? 'auto',
+            'success_url' => $data['successUrl'],
+            'cancel_url' => $data['cancelUrl'],
             'payment_method_types' => ['card', 'bancontact'],
-            'line_items'           => [
+            'line_items' => [
                 [
-                    'quantity'   => 1,
+                    'quantity' => 1,
                     'price_data' => [
-                        'currency'     => $data['currency'],
-                        'unit_amount'  => $data['amount'],
+                        'currency' => $data['currency'],
+                        'unit_amount' => $data['amount'],
                         'product_data' => [
                             'name' => 'Single donation',
                         ],
@@ -94,12 +94,12 @@ class CheckoutSessionController
     private function subscription(array $data): array
     {
         $params = [
-            'mode'                 => 'subscription',
-            'locale'               => $data['locale'] ?? 'auto',
-            'success_url'          => $data['successUrl'] ?? null,
-            'cancel_url'           => $data['cancelUrl'] ?? null,
+            'mode' => 'subscription',
+            'locale' => $data['locale'] ?? 'auto',
+            'success_url' => $data['successUrl'] ?? null,
+            'cancel_url' => $data['cancelUrl'] ?? null,
             'payment_method_types' => ['card'],
-            'subscription_data'    => [
+            'subscription_data' => [
                 'items' => [['plan' => $data['plan'] ?? null]],
             ],
         ];

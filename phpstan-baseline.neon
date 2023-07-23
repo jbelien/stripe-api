@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$data of method StripeAPI\\\\Controllers\\\\CheckoutSessionController\\:\\:[a-z]+\\(\\) expects array\\{.+?\\}, array\\<string, mixed\\> given\\.$#"
+			count: 2
+			path: src/Controllers/CheckoutSessionController.php

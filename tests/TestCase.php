@@ -28,6 +28,9 @@ class TestCase extends PHPUnit_TestCase
         return $app;
     }
 
+    /**
+     * @param array<string, mixed> $data
+     */
     protected function createRequest(string $method, string $path, array $data): ServerRequestInterface
     {
         $uri = new Uri('', '', 80, $path);
@@ -35,8 +38,7 @@ class TestCase extends PHPUnit_TestCase
         $headers = new Headers();
         $headers->addHeader('Accept', 'application/json');
 
-        $handle = fopen('php://temp', 'w+');
-        $stream = (new StreamFactory())->createStreamFromResource($handle);
+        $stream = (new StreamFactory())->createStream();
 
         $request = new Request($method, $uri, $headers, [], [], $stream);
         $request = $request->withParsedBody($data);

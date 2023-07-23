@@ -24,7 +24,8 @@ final class CheckoutSessionTest extends TestCase
 
         self::assertEquals(200, $response->getStatusCode());
 
-        $json = json_decode((string) $response->getBody(), true);
+        /** @var array<string, mixed> $json */
+        $json = json_decode((string) $response->getBody(), true, 512, JSON_THROW_ON_ERROR);
 
         self::assertArrayHasKey('id', $json);
         self::assertEquals('checkout.session', $json['object']);
@@ -51,7 +52,8 @@ final class CheckoutSessionTest extends TestCase
 
         self::assertEquals(200, $response->getStatusCode());
 
-        $json = json_decode((string) $response->getBody(), true);
+        /** @var array<string, mixed> $json */
+        $json = json_decode((string) $response->getBody(), true, 512, JSON_THROW_ON_ERROR);
 
         self::assertArrayHasKey('id', $json);
         self::assertEquals('checkout.session', $json['object']);

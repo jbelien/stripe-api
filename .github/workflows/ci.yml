@@ -1,0 +1,49 @@
+name: PHP CI
+
+on:
+  push:
+    branches: [ 2.x ]
+  pull_request:
+    branches: [ 2.x ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ['8.1', '8.2']
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use PHP ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: curl
+      - name: Validate `composer.json` and `composer.lock`
+        run: composer validate
+      - name: Install dependencies
+        uses: ramsey/composer-install@v2
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        working-directory: src
+      - name: Run test suite
+        run: composer run-script test
+        env:
+          STRIPE_API_KEY: ${{ secrets.STRIPE_API_KEY }}
+
+  phpstan:
+    name: PHPStan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ramsey/composer-install@v2
+      - run: composer run-script analyse -- --no-progress
+
+  phpcsfixer:
+    name: PHP Coding Standards Fixer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ramsey/composer-install@v2
+      - run: composer run-script cs

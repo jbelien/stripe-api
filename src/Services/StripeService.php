@@ -14,7 +14,7 @@ class StripeService
     public function __construct(Configuration $config)
     {
         $this->client = new StripeClient([
-            'api_key'        => $config->stripeApiKey,
+            'api_key' => $config->stripeApiKey,
             'stripe_version' => self::VERSION,
         ]);
     }

@@ -1,5 +1,6 @@
 {
     "name": "jbelien/stripe-api",
+    "description": "A simple Stripe API wrapper",
     "license": "GPL-3.0-or-later",
     "type": "project",
     "require": {
@@ -13,18 +14,25 @@
         "php-cs-fixer/shim": "^3.22",
         "phpstan/extension-installer": "^1.3",
         "phpstan/phpstan": "^1.10",
-        "phpstan/phpstan-strict-rules": "^1.5"
+        "phpstan/phpstan-phpunit": "^1.3",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "phpunit/phpunit": "^10.2"
     },
     "autoload": {
         "psr-4": {
             "StripeAPI\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
             "phpstan/extension-installer": true
-        }
+        },
+        "sort-packages": true
     },
     "scripts": {
         "analyse": "phpstan analyse",
@@ -33,6 +41,7 @@
         "serve": [
             "Composer\\Config::disableProcessTimeout",
             "@php -S localhost:8888 -t public"
-        ]
+        ],
+        "test": "phpunit"
     }
 }

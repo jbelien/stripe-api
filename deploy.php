@@ -2,6 +2,7 @@
 
 namespace Deployer;
 
+require 'recipe/composer.php';
 require 'contrib/php-fpm.php'; // See https://deployer.org/docs/7.x/contrib/php-fpm + https://deployer.org/docs/7.x/avoid-php-fpm-reloading
 
 set('git_tty', true);

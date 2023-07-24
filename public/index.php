@@ -17,6 +17,8 @@ $container = new Container();
 
 $app = AppFactory::createFromContainer($container);
 
+$app->options('/{routes:.+}', fn ($request, $response, $args) => $response); // CORS preflight
+
 $app->add(CORSMiddleware::class);
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware($debug, true, true);

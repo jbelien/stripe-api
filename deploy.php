@@ -2,7 +2,6 @@
 
 namespace Deployer;
 
-require 'recipe/symfony.php';
 require 'contrib/php-fpm.php'; // See https://deployer.org/docs/7.x/contrib/php-fpm + https://deployer.org/docs/7.x/avoid-php-fpm-reloading
 
 set('git_tty', true);
@@ -13,7 +12,7 @@ set('php_fpm_version', '8.1');
 set('repository', 'https://github.com/jbelien/stripe-api.git');
 set('branch', '2.x');
 
-add('shared_files', []);
+add('shared_files', ['src/.env']);
 add('shared_dirs', []);
 add('writable_dirs', []);
 

@@ -6,6 +6,7 @@ use Slim\Middleware\BodyParsingMiddleware;
 use Slim\Routing\RouteCollectorProxy;
 use StripeAPI\Configuration;
 use StripeAPI\Controllers\CheckoutSessionController;
+use StripeAPI\Middlewares\CORSMiddleware;
 
 require __DIR__.'/../vendor/autoload.php';
 
@@ -15,6 +16,7 @@ $container = new Container();
 
 $app = AppFactory::createFromContainer($container);
 
+$app->add(CORSMiddleware::class);
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware($debug, true, true);
 

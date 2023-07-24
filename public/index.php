@@ -21,6 +21,8 @@ $app->add(CORSMiddleware::class);
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware($debug, true, true);
 
+$app->redirect('/', 'https://github.com/jbelien/stripe-api', 301);
+
 $app->get('/ping', PingController::class);
 
 $app->group('', function (RouteCollectorProxy $group) {

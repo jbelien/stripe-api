@@ -17,7 +17,8 @@ $container = new Container();
 
 $app = AppFactory::createFromContainer($container);
 
-$app->options('/{routes:.+}', fn ($request, $response, $args) => $response); // CORS preflight
+$app->options('/ping', fn ($request, $response, $args) => $response); // CORS preflight
+$app->options('/checkout/session/{mode:(?:payment|subscription)}', fn ($request, $response, $args) => $response); // CORS preflight
 
 $app->add(CORSMiddleware::class);
 $app->addRoutingMiddleware();

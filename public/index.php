@@ -17,18 +17,16 @@ $container = new Container();
 
 $app = AppFactory::createFromContainer($container);
 
-$app->options('/{routes:.+}', fn ($request, $response, $args) => $response); // CORS preflight
-
 $app->add(CORSMiddleware::class);
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware($debug, true, true);
 
 $app->redirect('/', 'https://github.com/jbelien/stripe-api', 301);
 
-$app->get('/ping', PingController::class);
+$app->map(['OPTIONS', 'GET'], '/ping', PingController::class);
 
 $app->group('', function (RouteCollectorProxy $group) {
-    $group->post('/checkout/session/{mode:(?:payment|subscription)}', CheckoutSessionController::class);
+    $group->map(['OPTIONS', 'POST'], '/checkout/session/{mode:(?:payment|subscription)}', CheckoutSessionController::class);
 })->addMiddleware(new BodyParsingMiddleware());
 
 $app->run();

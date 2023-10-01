@@ -14,7 +14,7 @@ jobs:
       matrix:
         php-version: ['8.1', '8.2']
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
         with:
@@ -36,7 +36,7 @@ jobs:
     name: PHPStan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ramsey/composer-install@v2
       - run: composer run-script analyse -- --no-progress
 
@@ -44,6 +44,6 @@ jobs:
     name: PHP Coding Standards Fixer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ramsey/composer-install@v2
       - run: composer run-script cs

@@ -23,7 +23,7 @@ jobs:
       - name: Validate `composer.json` and `composer.lock`
         run: composer validate
       - name: Install dependencies
-        uses: ramsey/composer-install@v2
+        uses: ramsey/composer-install@v3
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
         working-directory: src
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ramsey/composer-install@v2
+      - uses: ramsey/composer-install@v3
       - run: composer run-script analyse -- --no-progress
 
   phpcsfixer:
@@ -45,5 +45,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ramsey/composer-install@v2
+      - uses: ramsey/composer-install@v3
       - run: composer run-script cs
